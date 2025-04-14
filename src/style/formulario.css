@@ -1,0 +1,261 @@
+/* Estilos de vídeo de fundo e corpo */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* Fica atrás do conteúdo */
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ajusta o vídeo para cobrir o fundo */
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Transição suave */
+}
+
+/* Estilos do formulário */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #333, #494949);
+    padding-top: 100px; /* Ajuste esse valor conforme a altura da sua navbar */
+}
+
+.box {
+    color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 30%;
+    margin-bottom: 80px;
+}
+
+fieldset {
+    border: 3px solid #ffda00;
+    padding: 27px;
+}
+
+legend {
+    border: 1px solid #ffda00;
+    padding: 15px;
+    text-align: center;
+    background-image: linear-gradient(to right, #ffda00, #ceaf00);
+    border-radius: 8px;
+    text-shadow: #333 2px 2px 2px;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus~.labelInput,
+.inputUser:valid~.labelInput {
+    top: -25px;
+    font-size: 18px;
+    color: #ffda00;
+}
+
+#data_nascimento {
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+}
+
+#submit {
+    background-image: linear-gradient(to right, #ffda00, #ceaf00);
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    text-shadow: #333 2px 2px 2px;
+}
+
+#submit:hover {
+    background-image: linear-gradient(to right, #f4c430, #f4c430);
+    transform: scale(1.05);
+}
+
+/* Logo */
+.logo {
+    width: 80px;
+}
+
+/* Botões de navegação */
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffda00; /* Cor amarela */
+    background-color: transparent;
+    border: 2px solid #ffda00;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Animação ao passar o mouse */
+.nav-button:hover {
+    background-color: #ffda00; /* Amarelo cheio ao passar o mouse */
+    color: #000; /* Texto preto */
+    transform: scale(1.1); /* Leve aumento de tamanho */
+    box-shadow: 0px 0px 10px rgba(255, 218, 0, 0.8); /* Sombra brilhante */
+}
+
+/* Navbar */
+.navbar {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.transparent {
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.contatos, .localizacao, .outros, .redes {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px;
+        top: auto;
+        left: auto;
+        transform: translate(0, 0);
+    }
+
+    body {
+        padding-top: 140px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+      }
+}
+
+/* Ajustes específicos para dispositivos dobráveis, como o Galaxy Z Fold 5 */
+@media (min-width: 320px) and (max-width: 480px) {
+    .box {
+        padding: 10px; /* Reduzir o padding do formulário para caber melhor na tela */
+        width: 90%; /* Usar 90% da largura da tela */
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .navbar{
+        padding: 1px;
+    }
+
+    #submit {
+        width: 100%;
+        padding: 12px; /* Ajustar o tamanho do botão */
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .box {
+        padding: 12px; /* Ajustar o padding em telas médias */
+        width: 85%; /* Tornar o formulário um pouco mais estreito */
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    #submit {
+        width: 100%;
+        padding: 15px; /* Ajuste o tamanho do botão para ser responsivo */
+        font-size: 16px;
+    }
+}

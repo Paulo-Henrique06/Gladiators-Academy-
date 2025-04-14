@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.transparent {
+    background-color: rgba(51, 51, 51, 0.6);
+}
+
+/* Outros estilos permanecem iguais... */
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-button {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffda00; /* Cor amarela */
+    background-color: transparent;
+    border: 2px solid #ffda00;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Animação ao passar o mouse */
+.nav-button:hover {
+    background-color: #ffda00; /* Amarelo cheio ao passar o mouse */
+    color: #000; /* Texto preto */
+    transform: scale(1.1); /* Leve aumento de tamanho */
+    box-shadow: 0px 0px 10px rgba(255, 218, 0, 0.8); /* Sombra brilhante */
+}
+
+.btn-action {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: #ffda00;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content */
+.info-section {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    background-color: #111;
+}
+
+.info-image {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.info-content h2 {
+    font-size: 2.5rem;
+    color: #ffda00;
+}
+
+.info-content p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-top: 1rem;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #222;
+}
+
+.gallery-image {
+    width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.contatos, .localizacao, .outros, .redes {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+#flex-cards {
+    display: flex;
+    justify-content: space-around;
+    margin:  2rem 2rem;
+  }
+  
+  
+  .mensalidade {
+      margin-top: 2vh;
+      margin-bottom: 4vh;
+      background-color: rgb(199, 253, 188);
+      color: rgb(5, 139, 0);
+      padding: 5px 15px 5px 15px;
+      width: 100%;
+      border-radius: 30px;
+      font-weight: bold;
+      text-align: center;
+      font-size:small;
+  }
+  
+  .card1 {
+      justify-content: center;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      margin-top: 2rem;
+      border: 2px solid rgb(0, 0, 0);
+      transition: 1s ease;
+   }
+  
+   .card1:hover {
+    transition: 0.5s;
+    transform: scale(1.02);
+    border: 2.5px solid rgb(255, 230, 0);
+   }
+  
+   .letra {
+    font-size: 20px;
+    margin-top: 0px;
+    color: rgb(255, 230, 0);
+   }
+    
+    .card-img-top {
+      width: 280px; 
+      height: 140px;
+    }
+    
+    .card-content {
+      padding: 15px 15px 25px 15px;
+      background-color: #3B3B40; 
+    }
+  
+    .plano-a {
+      color: rgb(37, 37, 37);
+      background-color: rgb(255, 187, 0);
+      text-align: center;
+      padding: 0.5rem 5rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: solid;
+      transition: 0.3s;
+    }
+  
+    .plano-a:hover {
+      background-color: rgb(207, 135, 0);
+    }
+  
+    .riscos {
+      text-decoration: line-through;
+    }
+  
+    .textos {
+      margin: 0rem 0;
+      font-weight: 3px;
+      color: white;
+      font-size: 15px;
+    }
+
+    #subTitle {
+        font-size: 2.5rem;
+        color: #ffda00;
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .logo {
+        width: 80px;
+    }
+    
+    /* Header */
+    .header {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px;
+    }
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Ocupa a altura total do header */
+        padding: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem; /* Aumenta o tamanho da fonte */
+        max-width: 80%;
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Sombra para destacar o texto */
+        margin-bottom: 2rem;
+        color: #ffda00; /* Mantém o amarelo brilhante */
+        position: relative;
+        padding: 1rem 2rem;
+        background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente para destaque */
+        border-radius: 15px; /* Bordas arredondadas */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o contêiner da frase */
+    }
+
+    /* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 1.4rem; /* Diminui o tamanho da fonte */
+        padding: 0.6rem 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte para telas menores */
+        padding: 1rem;
+    }
+
+    /* Ajusta o tamanho da fonte da hero-title */
+    .hero-title {
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte para telas menores */
+        padding: 1rem;
+    }
+
+    /* Responsividade para o container do header */
+    .header {
+        padding-top: 120px; /* Ajusta o padding superior */
+    }
+
+    /* Ajuste para os botões de navegação */
+    .nav-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center; /* Centraliza os botões */
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .nav-button {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        padding: 0.5rem 1rem; /* Ajusta o padding */
+    }
+
+    .logo {
+        width: 80px; /* Reduz o tamanho do logo */
+    }
+
+    /* Ajustes para a seção de informação */
+    .info-section {
+        flex-direction: column; /* Coloca a imagem e o texto em colunas */
+        padding: 2rem;
+    }
+
+    .info-image {
+        width: 100%; /* A imagem ocupa toda a largura disponível */
+        margin-bottom: 1rem; /* Adiciona espaçamento abaixo da imagem */
+    }
+
+    .info-content h2 {
+        font-size: 2rem; /* Ajusta o tamanho do título */
+    }
+
+    .info-content p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+    }
+
+    /* Ajustes para a galeria */
+    .gallery {
+        flex-direction: column; /* Coloca as imagens da galeria em coluna */
+        padding: 2rem 1rem;
+    }
+
+    .gallery-image {
+        width: 100%; /* A imagem ocupa toda a largura disponível */
+        margin-bottom: 1rem; /* Adiciona espaçamento abaixo das imagens */
+    }
+
+    /* Ajustes para o footer */
+    .footer-container {
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Ajustes para os cards */
+    #flex-cards {
+        flex-direction: column; /* Coloca os cards em coluna */
+        margin: 1rem 0;
+    }
+
+    .card1 {
+        width: 100%; /* Faz os cards ocuparem toda a largura disponível */
+        margin-top: 1rem; /* Adiciona um espaçamento superior */
+    }
+
+    .card-img-top {
+        width: 100%; /* A imagem no card ocupa toda a largura */
+        height: auto; /* Mantém a proporção */
+    }
+
+    .mensalidade {
+        width: 100%; /* A mensalidade ocupa toda a largura disponível */
+        text-align: center; /* Centraliza o texto */
+        padding: 10px;
+    }
+
+    .plano-a{
+        width: 100%;
+        padding: 0.5rem 7rem;
+    }
+}
