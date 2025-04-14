@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario | Gladiators</title>
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/form.js"></script>
+    <link rel="stylesheet" href="../style/formulario.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="../public/menu.html">
+            <img src="../../images/logo.png" alt="Logo" class="logo">
+        </a>
+        <div class="nav-buttons">
+            <a href="../public/menu.html">
+                <button class="nav-button">Início</button>
+            </a>
+            <a href="../public/plano.html"> 
+                <button class="nav-button">Planos</button>
+            </a>
+                <button class="nav-button">Matrícula</button>
+        </div>
+    </nav>
+
+    <!-- Vídeo de fundo -->
+    <div class="video-background">
+        <video id="background-video" autoplay muted preload="auto">
+            <source src="../../videos/video1.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+<!-- Formulário -->
+<div class="box">
+    <form action="../database/processo.php" method="POST" onsubmit="validateBirthDate(event)" onchange="validatePhone(event)">
+        <fieldset>
+            <legend><b>Formulário de Clientes</b></legend>
+            <div class="inputBox">
+                <input type="text" name="nome" id="nome" class="inputUser" required oninput="filterLettersOnly ()">
+                <label for="nome" class="labelInput">Nome Completo</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="email" name="email" id="email" class="inputUser" required>
+                <label for="email" class="labelInput">Email</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="tel" name="telefone" id="telefone" class="inputUser" required oninput="maxCharacter ()">
+                <label for="telefone" class="labelInput">Telefone</label>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                <label for="endereco" class="labelInput">Endereço</label>
+            </div>
+                <p>Sexo:</p>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+            <br><br>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+            <br><br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required onchange="validateBirthDate ()">
+            
+            <!-- Opções de Planos -->
+            <p>Escolha seu plano:</p>
+            <input type="radio" id="plano1" name="plano" value="Básico" required>
+            <label for="plano1">Plano Gladiators - R$ 89,90/mês</label>
+            <br><br>
+            <input type="radio" id="plano2" name="plano" value="Intermediário" required>
+            <label for="plano2">Plano Black Friday - R$ 139,90/mês</label>
+            <br><br>
+            <input type="radio" id="plano3" name="plano" value="Premium" required>
+            <label for="plano3">Plano Premium - R$ 159,90/mês</label>
+            <br><br>
+
+            <input type="submit" name="submit" id="submit">
+        </fieldset>
+    </form>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="contatos">
+            <h4>Contatos</h4>
+            <a href=""><p>+55 (61) 99587-6294</p></a>
+            <a href=""><p>gladiators.academy@gmail.com</p></a>
+        </div>
+
+        <div class="localizacao">
+            <h4>Localização</h4>
+            <a href=""><p>SIA Trecho 5 lote 000 bloco Z sala 900 - Guará, Brasília - DF, 70000-010</p></a>
+        </div>
+
+        <div class="redes">
+            <h4>Redes Sociais</h4>
+            <a href="https://instagram.com"><p>https://instagram.com</p></a>
+        </div>
+
+        <div class="outros">
+            <h4>Outros</h4>
+            <a href=""><p>Políticas de Privacidade</p></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Gladiators. Todos os direitos reservados.</p>
+    </div>
+</footer>    
+</body>
+</html>
